@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+.uv/
+
+# Poetry / uv
+requirements.txt
+
+# Env
+.env
+
+# DB
+.pgdata/
