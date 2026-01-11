@@ -37,7 +37,7 @@ def can_claim_job(job: Job | None, now: datetime) -> bool:
     """Check if a job can be claimed by the current worker."""
     if job is None:
         return False
-    if job.status not in (JobStatus.queued, JobStatus.failed):
+    if job.status not in (JobStatus.queued, JobStatus.scheduled):
         return False
     if job.run_at > now:
         return False

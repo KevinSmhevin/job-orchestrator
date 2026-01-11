@@ -8,7 +8,7 @@ from sqlalchemy import select, func
 from sqlalchemy.orm import Session
 
 from app.models.job import Job, JobStatus
-from app.schemas.job import JobCreate, JobUpdate, JobFilter
+from app.schemas.job import JobFilter
 
 
 class JobRepository:

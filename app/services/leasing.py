@@ -46,7 +46,7 @@ class LeasingService:
         lease_expires_at = compute_lease_expiry(now, lease_seconds)
         
          # Query for next runnable job (with row lock)
-        job = JobRepository.find_next_runnable(session, queues, now)
+        job = JobRepository.find_next_runnable_job(session, queues, now)
         if job is None:
             return None
 
