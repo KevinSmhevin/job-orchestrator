@@ -25,7 +25,8 @@ class Settings(BaseSettings):
     # ─────────────────────────────────────────────────────────────────
     
     database_url: str = Field(
-        default="postgresql://postgres:postgres@localhost:5433/jobs",
+        default="postgresql+psycopg://postgres:postgres@localhost:5433/jobs",
+        #                    ^^^^^^^^
         description="PostgreSQL connection URL"
     )
     
